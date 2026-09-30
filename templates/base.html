@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}TaskFlow{% endblock %}</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            TaskFlow
+        </div>
+
+        <nav>
+
+            <a href="/" class="menu-item active">
+                🏠 Dashboard
+            </a>
+
+            <a href="#" class="menu-item">
+                📋 Tarefas
+            </a>
+
+            <a href="#" class="menu-item">
+                📁 Projetos
+            </a>
+
+            <a href="#" class="menu-item">
+                📅 Calendário
+            </a>
+
+            <a href="#" class="menu-item">
+                📊 Relatórios
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <main class="main">
+
+        {% block content %}
+        {% endblock %}
+
+    </main>
+
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+
+</html>
